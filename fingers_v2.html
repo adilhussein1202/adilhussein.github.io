@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game : Fingers 2.0</title>
+	<style type="text/css">
+		body
+		{ 	
+			border:	10px black solid;
+			height: 650px;
+			margin: 0px;
+			padding: 0px;
+			background-color: #808000;
+			text-transform: capitalize;
+			font-family: "Comic Sans MS", cursive, sans-serif;
+			color: #C0C0C0;
+		}
+		h1
+		{
+			margin-top: 200px;
+		}
+	</style>
+</head>
+<body>
+	<center>
+	<h1>In this game the computer will guess<br>how many fingers you are holding up!!!</h1>
+	<h3>Click on the button below</h3>
+	<p><select id="inputText">
+		<option>0</option>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+	</select>
+	<button id="guess">Guess!</button></p>
+	</center>
+	<script type="text/javascript">
+		document.getElementById("guess").onclick = function(){
+		var inputText = document.getElementById("inputText").value;
+		var guesses = 1;
+		var condition = false;
+		while ( condition == false){
+		var random = Math.floor(Math.random()*6);
+		if( inputText == random)
+		{
+			//computer is correct
+			condition = true;
+			alert("Got it!!! The number is "+random+" and it took me "+guesses+" guesses to guess");
+		}
+		else
+		{
+				//computer is wrong
+		guesses++;
+		}
+		}
+	}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Technology - BBC News</title>
+	<link rel = "icon" href = "bbc-logo.png"> 
+	<style type="text/css">
+		#top_bar
+		{
+			width: 1000px;
+			margin: 0px auto;
+			height: 40px;
+		}
+		#logo
+		{
+			margin: 9px 9px 0 9px;
+			float: left;
+		}
+		body
+		{
+			margin: 0;
+			padding: 0;
+			font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+		}
+		.topbar_section
+		{
+			border-left: 1px #D6D6D6 solid;
+			height: 100%;
+			float: left;
+		}
+		.sign_in
+		{
+			margin: 10px 9px 0 10px;
+		}
+		#sign_in_text
+		{
+			font-weight: bold;
+			font-size: 90%;
+			position: relative;
+			bottom: 5px;
+			left: -7px;
+			margin-right: 50px;
+		}
+		.topbar_menu
+		{
+			font-weight: bold;
+			padding: 12px 9px 0 9px;
+			height: 28px;
+		}
+		#dropdown
+		{
+			margin: 0 0 0 50px;
+		}
+		#search_box
+		{
+			background-color: #E4E4E4;
+			margin: 9px 0px 0 9px;
+			border: none;
+			height: 20px;
+			width: 180px;
+			font-weight: bold;
+			padding-left: 5px;
+			float: left;
+		}
+		#lens
+		{
+			margin: 9px 0 0 0;
+			height: 22px;
+		}
+		#news_bar
+		{
+		  width: auto;
+		  margin: 0 auto;
+		  height: 55px;
+		  background-color: #BB1919;
+		  padding-left: 180px;
+		  font-size: 260%;
+		  padding-top: 5px;
+		  color: white;
+		}
+		#news_menu
+		{
+			color: white;
+			width: auto;
+			height: 25px;
+			padding-left: 170px;
+			padding-top: 10px;
+			background-color: #A91717;
+		}
+		#clear
+		{
+			clear: both;
+		}
+		#bottom_menu_red
+		{
+			width: 1200px;
+			height: 25px;
+			background-color: #A91717;
+			color: white;
+			padding-left: 170px;
+			padding-top: 10px; 
+			font-size: 15px;
+		}
+		.bottom_menu_border
+		{
+			border-right: 1px #C66464 solid;
+			height: 18px;
+			float: left;
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+		.more_edit a
+		{
+			color: white;
+			text-decoration: none;
+		}
+		#bottom_menu_red a
+		{
+			color: white;
+			text-decoration: none;
+		}
+		.no_border
+		{
+			border: none; !important;
+		}
+		#dropdown1
+		{
+			position: relative;
+			left: -8px;
+			top: 2px;
+		}
+		#page_container
+		{
+			width: 1350px;
+		}
+		#left_body
+		{
+			width: 690px;
+			height: 340px;
+			margin-top: 0px;
+			margin-left: 180px;
+			float: left;
+			border-right: 1px #E5E8E8 solid;
+		}
+		#p_main_article
+		{
+			font-weight: normal;
+			font-size: 20px;
+			border-bottom: 3px #BB1919 solid;
+			width: 103px;
+			margin: 5px 0px 0px 180px;
+		}
+		h3
+		{
+			font-size: 30px;
+			margin-top: 20px;
+		}
+		#main_content
+		{
+			color: #515A5A;
+			font-size: 90%;
+			margin-top: -20px;
+			line-height: 18px;
+		}
+		#main_heading
+		{
+			text-decoration: none;
+		}
+		#main_heading:visited
+		{
+			color: black;
+		}
+		#main_heading:hover
+		{
+			color: #1167A8;
+		}
+		#clock_p
+		{
+			font-size: 78%;
+			margin-top: -5px;
+		}
+		#clock
+		{
+			position: relative;
+			top: 3px;
+		}
+		#date
+		{
+			margin-right: 10px;
+			margin-left: 10px;
+			color: #515A5A;
+		}
+		#tech_a
+		{
+			text-decoration: none;
+			color: #A91717;
+			margin-left: 7px;
+		}
+		#asda
+		{
+			float: right;
+			margin-top: -190px;
+			margin-right: 20px;
+		}
+		#hr_small
+		{
+			width: 50px;
+			border-top: 1px #BB1919 solid;
+		}
+		#two_tags
+		{
+			font-size: 90%;
+			line-height: 25px;
+		}
+		#two_tags a
+		{
+			text-decoration: none;
+			color: black;
+			font-weight: normal;
+		}
+		#two_tags a:hover
+		{
+			color: #1167A8;
+		}
+		#body_right
+		{
+			width: 300px;
+			height: 340px;
+			float: right;
+			margin-top: -340px;
+			margin-right: 169px;
+		}
+		#heading_right
+		{
+			font-size: 20px;
+			font-weight: normal;
+		}
+		#article1_img
+		{
+			float: left;
+			margin-right: 9px;
+		}
+		#article2_img
+		{
+			float: left;
+			margin-right: 9px;
+		}
+		#article3_img
+		{
+			float: left;
+			margin-right: 9px;
+		}
+        .article_text
+        {
+        	font-weight: bold;
+        	font-size: 16px;
+        	line-height: 20px;
+    	}
+    	.article_text3
+    	{
+    		font-weight: bold;
+        	font-size: 15px;
+    	}
+    	.article_text3:hover
+    	{
+    		font-weight: bold;
+        	font-size: 15px;
+        	color: #1167A8;
+    	}
+        .article_text:hover
+        {
+        	color: #1167A8;
+        }
+        .time1
+        {
+        	font-size: 13px;
+        }
+        .short_text
+        {
+        	color: #A91717;
+        	margin-top: -3px;
+        	margin-left: 117px;
+        	font-size: 14px;
+        }
+	</style>
+</head>
+<body>
+	<div id="top_bar">
+		<img id="logo" src="bbc-logo.png">
+		<div id="signin" class="topbar_section">
+			<img class="sign_in" src="sign_in.jpg">
+			<span id="sign_in_text">Sign in</span>
+		</div>
+		<div class="topbar_section topbar_menu">
+			News
+		</div>
+		<div class="topbar_section topbar_menu">
+			Sports
+		</div>
+		<div class="topbar_section topbar_menu">
+			Weather
+		</div>
+		<div class="topbar_section topbar_menu">
+			Shop
+		</div>
+		<div class="topbar_section topbar_menu">
+			Reel
+		</div>
+		<div class="topbar_section topbar_menu">
+			Travel
+		</div>
+		<div class="topbar_section topbar_menu">
+			More
+			<img id="dropdown" src="dropdown.jpg">
+		</div>
+		<div class="topbar_section">
+			<input id="search_box" type="text" placeholder="Search">
+			<input type="image" id="lens" src="lens.jpg">
+		</div>
+	</div>
+	<div id="clear"></div>
+	<div id="news_bar">
+		NEWS
+	</div>
+	<div id="clear"></div>
+	<div id="bottom_menu_red">
+		<div class="bottom_menu_border">
+			<a href="https://www.bbc.com/news">Home</a> 
+		</div>
+		<div class="bottom_menu_border">
+			<a href="https://www.bbc.com/news/video_and_audio/headlines">Video</a>
+		</div>
+		<div class="bottom_menu_border">
+			<a href="https://www.bbc.com/news/world">World</a>
+		</div>
+		<div class="bottom_menu_border">
+			<a href="https://www.bbc.com/news/world/asia">Asia</a>
+		</div>
+		<div class="bottom_menu_border">
+			<a href="https://www.bbc.com/news/uk">UK</a>
+		</div>
+		<div class="bottom_menu_border">
+			<a href="https://www.bbc.com/news/business">Business</a>
+		</div>
+		<div class="bottom_menu_border">
+			<a href="https://www.bbc.com/news/technology">Tech</a>
+		</div>
+		<div class="bottom_menu_border">
+			<a href="https://www.bbc.com/news/science_and_environment">Science</a>
+		</div>
+		<div class="bottom_menu_border">
+			<a href="https://www.bbc.com/news/stories">Stories</a>
+		</div>
+		<div class="bottom_menu_border">
+			<a href="https://www.bbc.com/news/entertainment_and_arts">Entertainment & Arts</a>
+		</div>
+		<div class="bottom_menu_border">
+			<a href="https://www.bbc.com/news/health">Health</a>
+		</div>
+		<div class="bottom_menu_border">
+			<a href="https://www.bbc.com/news/world_radio_and_tv">World News TV</a>
+		</div>
+		<div class="bottom_menu_border no_border">
+			<a href="">More</a>
+		</div>
+		<img id="dropdown1" src="dropdown1.jpg">
+	</div>
+	<div id="clear"></div>
+	<div><p id="p_main_article">Technology</p></div>
+	<div id="page_container">
+	<div id="left_body">
+		<div id="main_article">
+			<h3><a id="main_heading" href="">Asda bug exposed payment details</a></h3>
+		</div>
+		<p id="main_content"> Security vulnerabilities that put<br>customers at risk have affected<br>Asda's website for a couple of years,<br>a security expert has revealed.
+		</p>
+		<p id="clock_p"><img id="clock" src="clock.jpg"><span id="date">21 May 2019</span> | <a id="tech_a" href="">Technology</a></p>
+		<hr id="hr_small" align="left">
+		<p id="two_tags"><a href="">Surviellance firm hit in the hack attack<br></a>
+		<a href="">eBay flaw has existed for months</a>	
+		</p>
+		<img id="asda" src="asda.jpg">
+	</div>
+	<div id="clear"></div>
+	<div id="body_right">
+		<p id="heading_right">Watch/Listen</p>
+		<img id="article1_img" src="article1.jpg">
+		<p class="article_text">UK science chief backs blockchains</p>
+		<p class="time1">1 hour ago</p>
+		<img id="article2_img" src="article2.jpg">
+		<p class="article_text">Drone register gives 'accountability'</p>
+		<p class="time1">21 May 2019</p>
+		<p class="short_text">Technology</p>
+		<img id="article3_img" src="article3.jpg">
+		<p class="article_text3">SapceX rocket explodes during landing</p>
+		<p class="time1">21 May 2019</p>
+		<p class="short_text">Science & Environment</p>
+	</div>
+	</div>
+</body>
+</html>

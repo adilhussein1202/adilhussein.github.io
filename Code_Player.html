@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code Player</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script src="jquery-ui/jquery-ui.js"></script>
+	<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+	<style type="text/css">
+	
+	body
+	{
+		margin: 0px;
+		padding: 0px;
+		font-family: sans-serif;
+	}
+
+	#container
+	{
+		height: auto;
+		width: auto;
+	}
+
+	#top-bar
+	{
+		width: 100%;
+		height: 35px;
+		background-color: #EDEDED;
+		padding-top: 4px;
+	}
+
+	.elements
+	{
+		font-size: 90%;
+		float: left;
+		border: 1px solid #D3D3D3;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+
+	#logo
+	{
+		float: left;
+		margin-top: 7px;
+		font-size: 90%;
+		margin-left: 5px;
+	}
+
+	#html
+	{
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+
+	#output
+	{
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
+	#button-container
+	{
+		width: 300px;
+		margin: 0px auto;
+	}
+
+	.active
+	{
+		background-color: #E8F2FF;
+	}
+
+	.highlightedButtons
+	{
+		background-color: grey;
+	}
+
+	#htmltextarea, #csstextarea, #javascripttextarea
+	{
+		resize: none;
+		border-top: none;
+		border-color: grey;
+	}
+
+	.panel
+	{
+		width: 50%;
+		float: left;
+		border-left: none;
+	}
+
+	iframe
+	{
+		border: none;
+	}
+
+	.hidden
+	{
+		display: none;
+	}
+
+	</style>
+</head>
+<body>
+		
+	<div id="container">
+
+		<div id="top-bar">
+
+			<div id="logo">Code Player</div>
+
+			<div id="button-container">
+			
+				<div class="elements active" id="html">HTML</div>
+				<div class="elements" id="css">CSS</div>
+				<div class="elements" id="javascript">JavaScript</div>
+				<div class="elements active" id="output">Output</div>
+
+			</div>
+
+		</div>
+
+		<div id="body">
+			
+			<textarea id="htmltextarea" class="panel"><p id="paragraph">Hello World!</p></textarea>
+
+			<textarea id="csstextarea" class="panel hidden">p {color: green;}</textarea>
+
+			<textarea id="javascripttextarea" class="panel hidden">document.getElementById("paragraph").innerHTML = "Hola mundo"</textarea>	
+
+			<iframe id="outputPanel" class="panel"></iframe>	
+
+		</div>
+
+	</div>
+
+<script type="text/javascript">
+
+	function updateOutput()
+
+	{
+
+		$("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#csstextarea").val() + "</style></head><body>" +
+			$("#htmltextarea").val() + "</body></html>");
+
+		document.getElementById("outputPanel").contentWindow.eval($("#javascripttextarea").val());
+
+	}
+
+	$(".elements").hover(function(){
+
+		$(this).addClass("highlightedButtons");
+
+		$(this).css("cursor", "pointer");
+	},
+
+	function(){
+
+		$(this).removeClass("highlightedButtons");
+
+	});
+
+									var activeAreas = 4 - $(".hidden").length;
+
+									$(".panel").width(($(window).width() / activeAreas) - 15);
+
+	$(".elements").click(function(){
+
+		$(this).toggleClass("active");
+
+		$(this).removeClass("highlightedButtons");
+
+		var textid = $(this).attr("id") + "textarea";
+
+		$("#" + textid).toggleClass("hidden");
+
+		var activeAreas = 4 - $(".hidden").length;
+
+		$(".panel").width(($(window).width() / activeAreas) - 15);
+
+	});
+
+	$(".panel").height($(window).height() - $("#top-bar").height() - 15);
+
+		updateOutput();
+
+	$("textarea").on("change keyup paste", function(){
+
+		updateOutput();
+
+	});
+
+</script>
+</body>
+</html>

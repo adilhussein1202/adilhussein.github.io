@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game : Fingers 1.0</title>
+
+	<style type="text/css">
+		
+		#btn1
+		{
+			border: none;
+		}
+
+		body
+		{
+			font-family: "Comic Sans MS", cursive, sans-serif;
+		}
+		h3
+		{
+			text-transform: capitalize;
+		}
+	</style>
+
+</head>
+<body>
+
+	<h1 align="center">JavaScript Game: How Many Fingers am I Holding Up?</h1>
+	<h3 align="center">In this game We have to tell how many fingers the computer is holding up</h3>
+	<center>
+	<p>First Enter a Value Then Click on The Button Below</p>
+
+	<input type="text" id="textbox">
+
+	<button id="btn">Guess</button>
+	</center>
+
+	<script type="text/javascript">
+		
+		document.getElementById('btn').onclick = function()
+		{
+			var x = Math.floor(Math.random()*6);
+
+			if (document.getElementById('textbox').value == x)
+			{
+				alert('Well Done!!');
+			}
+			else
+			{
+				alert('Better Luck Next Time!! The Number was ' + x);
+			}
+		}
+	</script>
+
+</body>
+</html>
